@@ -1,0 +1,171 @@
+.header {
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(192, 192, 192);
+    z-index: 100;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.middle-section {
+    flex: 1;
+    margin: 0px 35px 0px 70px;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.right-section {
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+    /* so that the logos wont shrink */
+    flex-shrink: 0;
+}
+
+.ham-menu-logo {
+    height: 24px;
+    margin: 0 24px 0 24px
+}
+
+.yt-logo {
+    height: 20px;
+}
+
+.search-button {
+    height: 40px;
+    width: 60px;
+    background-color: rgb(240, 240, 240);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(212, 212, 212);
+    margin-left: -1px;
+
+    position: relative;
+}
+
+.search-button, 
+.voice-button,
+.upload-icon-container,
+.yt-apps-icon-container,
+.notif-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.search-button .tooltip,
+.voice-button .tooltip,
+.upload-icon-container .tooltip,
+.yt-apps-icon-container .tooltip,
+.notif-icon-container .tooltip {
+    font-family: Roboto, Arial;
+    position: absolute;
+    background-color: grey;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -25px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+/* when we are hovering, target the tooltip */
+.search-button:hover .tooltip,
+.voice-button:hover .tooltip,
+.upload-icon-container:hover .tooltip,
+.yt-apps-icon-container:hover .tooltip,
+.notif-icon-container:hover .tooltip {
+    opacity: 1;
+}
+
+.voice-button {
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(245, 245, 245);
+    position: relative;
+}
+
+.search-bar {
+    flex: 1;
+    height: 36px;
+    padding-left: 12px;
+    font-size: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    border-radius: 2px;
+    /* inset to place the shadow inside the box */
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+    /* to shrink the search bar when the width is being adjusted */
+    width: 0;
+}
+
+.search-bar::placeholder {
+    font-family: Roboto, Arial;
+    font-size: 16px;
+}
+
+.search-icon {
+    height: 25px;
+}
+
+.voice-icon {
+    height: 25px;
+}
+
+.upload-icon {
+    height: 24px;
+}
+
+.yt-apps-icon {
+    height: 24px;
+}
+
+.notif-icon {
+    height: 24px;
+}
+
+.notif-icon-container {
+    position: relative;
+}
+
+.notif-count {
+    font-family: Roboto, Arial;
+    font-size: 10px;
+    border-radius: 10px;
+    padding: 2px;
+    position: absolute;
+    top: -1px;
+    right: -3px;
+    background: rgb(213, 13, 13);
+    color: white;
+}
+
+.current-user-pic {
+    height: 32px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+}
